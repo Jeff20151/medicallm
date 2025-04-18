@@ -1,0 +1,20 @@
+merge_method: ties
+models:
+- model: TsinghuaC3I/Llama-3-8B-UltraMedical
+- model: Henrychur/MMed-Llama-3-8B
+- model: deepseek-ai/DeepSeek-R1
+dtype: float16
+output_model: merged_models/UltraMed-MMed-DeepSeek-8B-ties
+base_model: TsinghuaC3I/Llama-3-8B-UltraMedical
+parameters:
+  density: 0.7
+tokenizer:
+  source: union
+  tokens:
+    <|im_start|>:
+      source: TsinghuaC3I/Llama-3-8B-UltraMedical
+    <|im_end|>:
+      source: TsinghuaC3I/Llama-3-8B-UltraMedical
+    <|eot_id|>:
+      source: TsinghuaC3I/Llama-3-8B-UltraMedical
+chat_template: auto

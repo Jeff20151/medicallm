@@ -1,0 +1,10 @@
+merge_method: sce
+models:
+- model: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+- model: TsinghuaC3I/Llama-3-8B-UltraMedical
+- model: Henrychur/MMed-Llama-3-8B
+dtype: float16
+base_model: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+tokenizer:
+  source: union
+chat_template: auto

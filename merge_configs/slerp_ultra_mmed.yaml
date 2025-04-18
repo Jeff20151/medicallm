@@ -1,0 +1,11 @@
+merge_method: slerp
+models:
+- model: TsinghuaC3I/Llama-3-8B-UltraMedical
+- model: Henrychur/MMed-Llama-3-8B
+dtype: float16
+base_model: TsinghuaC3I/Llama-3-8B-UltraMedical
+parameters:
+  t: 0.5
+tokenizer:
+  source: union
+chat_template: auto
