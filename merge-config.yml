@@ -1,0 +1,11 @@
+merge_method: linear
+models:
+  - path: "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
+    alpha: 1
+  - path: "Henrychur/MMed-Llama-3-8B"
+    alpha: 1
+  - path: "TsinghuaC3I/Llama-3-8B-UltraMedical"
+    alpha: 1
+tokenizer_source: "union"
+# If you want a different final dtype, e.g. fp16 or bf16, add:
+# dtype: "float16"
